@@ -22,6 +22,20 @@ class ArticleListRouter: ArticleListRouterProtocol {
     }
     
     func showArticleDetail(articleEntity: ArticleEntity) {
-        print("詳細画面へ遷移する 記事ID: \(articleEntity.id)")
+        guard let articleDetailViewController = UIStoryboard(name: "ArticleDetail", bundle: nil).instantiateInitialViewController() as? ArticleDetailViewController else {
+            fatalError()
+        }
+        
+        articleDetailViewController.articleEntity = articleEntity
+        
+        articleDetailViewController.presenter = ArticleDetailPresenter(
+            view: articleDetailViewController,
+            inject: ArticleDetailPresenter.Dependency(
+                getArticleByIdUseCase: UseCase(GetArticleByIdUseCase())
+            )
+        )
+        
+        view.navigationController?.pushViewController(articleDetailViewController,
+                                                      animated: true)
     }
 }
