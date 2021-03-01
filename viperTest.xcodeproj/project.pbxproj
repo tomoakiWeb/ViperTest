@@ -19,6 +19,8 @@
 		32FE9DFB25ED1EB100836554 /* GetArticlesArrayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE9DFA25ED1EB100836554 /* GetArticlesArrayUseCase.swift */; };
 		32FE9DFE25ED1ED200836554 /* GetArticleByIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE9DFD25ED1ED200836554 /* GetArticleByIdUseCase.swift */; };
 		32FE9E0125ED1F3300836554 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE9E0025ED1F3300836554 /* UseCase.swift */; };
+		32FE9E0425ED21B100836554 /* ArticleListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE9E0325ED21B100836554 /* ArticleListRouter.swift */; };
+		32FE9E0825ED221200836554 /* ArticleListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE9E0725ED221200836554 /* ArticleListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		32FE9DFA25ED1EB100836554 /* GetArticlesArrayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArticlesArrayUseCase.swift; sourceTree = "<group>"; };
 		32FE9DFD25ED1ED200836554 /* GetArticleByIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArticleByIdUseCase.swift; sourceTree = "<group>"; };
 		32FE9E0025ED1F3300836554 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		32FE9E0325ED21B100836554 /* ArticleListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListRouter.swift; sourceTree = "<group>"; };
+		32FE9E0725ED221200836554 /* ArticleListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				32FE9DFA25ED1EB100836554 /* GetArticlesArrayUseCase.swift */,
 				32FE9DFD25ED1ED200836554 /* GetArticleByIdUseCase.swift */,
 				32FE9E0025ED1F3300836554 /* UseCase.swift */,
+				32FE9E0325ED21B100836554 /* ArticleListRouter.swift */,
+				32FE9E0725ED221200836554 /* ArticleListPresenter.swift */,
 			);
 			path = viperTest;
 			sourceTree = "<group>";
@@ -160,7 +166,9 @@
 				325F32EF250B1A62008F0776 /* ArticleListViewController.swift in Sources */,
 				32FE9E0125ED1F3300836554 /* UseCase.swift in Sources */,
 				32FE9DFB25ED1EB100836554 /* GetArticlesArrayUseCase.swift in Sources */,
+				32FE9E0825ED221200836554 /* ArticleListPresenter.swift in Sources */,
 				325F32DB250B19B0008F0776 /* AppDelegate.swift in Sources */,
+				32FE9E0425ED21B100836554 /* ArticleListRouter.swift in Sources */,
 				32FE9DFE25ED1ED200836554 /* GetArticleByIdUseCase.swift in Sources */,
 				325F32F3250B1B96008F0776 /* ArticleDetailViewController.swift in Sources */,
 				325F32DD250B19B0008F0776 /* SceneDelegate.swift in Sources */,

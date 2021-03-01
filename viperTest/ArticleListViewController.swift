@@ -10,12 +10,15 @@ import UIKit
 
 class ArticleListViewController: UIViewController {
     
+    var presenter: ArticleListPresenterProtocol!
+    
     @IBOutlet weak var tableView: UITableView!
     
     private var articleEntities = [ArticleEntity]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.didLoad()
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -33,5 +36,21 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
+}
+
+extension ArticleListViewController: ArticleListViewProtocol {
     
+    func showArticles(_ articleEntities: [ArticleEntity]) {
+        self.articleEntities = articleEntities
+        tableView.reloadData()
+    }
+    
+    func showEmpty() {
+        tableView.isHidden = true
+        showArticles([])
+    }
+    
+    func showError(_ error: Error) {
+        // 今回はスキップ
+    }
 }
