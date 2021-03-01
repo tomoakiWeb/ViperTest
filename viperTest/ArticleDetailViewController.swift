@@ -22,11 +22,25 @@ class ArticleDetailViewController: UIViewController {
     }
     
     var articleEntity: ArticleEntity!
+    var presenter: ArticleDetailPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.didLoad(articleEntity: articleEntity)
         tableView.delegate = self
         tableView.dataSource = self
+    }
+}
+
+extension ArticleDetailViewController: ArticleDetailViewProtocol {
+    
+    func showArticle(_ articleEntity: ArticleEntity) {
+        self.articleEntity = articleEntity
+        tableView.reloadData()
+    }
+    
+    func showError(_ error: Error) {
+        // 今回はスキップ
     }
 }
 

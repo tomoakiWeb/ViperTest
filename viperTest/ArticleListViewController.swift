@@ -36,6 +36,12 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        presenter.didSelect(articleEntity: articleEntities[indexPath.row])
+    }
+    
 }
 
 extension ArticleListViewController: ArticleListViewProtocol {
