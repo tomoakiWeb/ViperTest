@@ -21,6 +21,8 @@ class ArticleDetailViewController: UIViewController {
         }
     }
     
+    var articleEntity: ArticleEntity!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -40,10 +42,10 @@ extension ArticleDetailViewController: UITableViewDelegate,UITableViewDataSource
         
         if row == .title {
             cell.textLabel?.text = "タイトル"
-            cell.detailTextLabel?.text = "記事のタイトル"
+            cell.detailTextLabel?.text = articleEntity.title
         }
         if row == .body {
-            cell.textLabel?.text = "記事の本文"
+            cell.textLabel?.text = articleEntity.body
             cell.detailTextLabel?.text = nil
         }
         return cell
